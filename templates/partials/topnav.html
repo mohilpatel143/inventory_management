@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="col-md-20 mt-2">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                Dashboard Statistics
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a class="text-decoration-none text-dark" href="{% url 'dashboard-staff' %}">
+                            <div class="card my-card shadow">
+                                <div class="card-body text-center">
+                                    <h4>Staff <i class="fas fa-users"></i></h4>
+                                    <h3>{{ workers_count }}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a class="text-decoration-none text-dark" href="{% url 'dashboard-supplier' %}">
+                            <div class="card my-card shadow">
+                                <div class="card-body text-center">
+                                    <h4>Supplier <i class="fas fa-users"></i></h4>
+                                    <h3>{{ dealers_count }}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a class="text-decoration-none text-dark" href="{% url 'dashboard-product' %}">
+                            <div class="card my-card shadow">
+                                <div class="card-body text-center">
+                                    <h4>Products <i class="fas fa-box"></i></h4>
+                                    <h3>{{ product_count }}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a class="text-decoration-none text-dark" href="{% url 'dashboard-order' %}">
+                            <div class="card my-card shadow">
+                                <div class="card-body text-center">
+                                    <h4>Orders <i class="fas fa-shipping-fast"></i></h4>
+                                    <h3>{{ orders_count }}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

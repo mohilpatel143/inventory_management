@@ -1,0 +1,42 @@
+{% extends 'partials/base.html' %}  <!-- Attach base File-->
+
+{% block title %}staff page{% endblock %}
+
+
+
+{% block content %}
+
+{% include 'partials/topnav.html' %}   <!-- Attach nav File -->
+
+<!--staff code page-->
+<div class="container">
+    <div class="row my-4">
+        
+        <div class="col-md-8">
+            <table class="table bg-white">
+                <thead class="bg-info text-white">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Mobile no.</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Activity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for worker in workers %}
+                    <tr>
+                        <tr>
+                            <td>{{ worker.username }}</td>
+                            <td>{{ worker.profile.phone }}</td>
+                            <td>{{ worker.email }}</td>
+                            <th scope="row"><a class="btn btn-info btn-sm"
+                                href="{% url 'dashboard-staff-detail' worker.id %}">View</a></th>
+                        </tr>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+{% endblock %}
