@@ -1,4 +1,4 @@
-open project in any text editor[ex:visul studio].
+open project in any text editor[ex:visul studio]...
 
 open terminal and create superuser.
 
